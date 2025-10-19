@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doza Kombucha – Trà lên men tốt cho sức khỏe</title>
+  <meta name="description" content="Giới thiệu Doza Kombucha – trà lên men tự nhiên, ngon – healthy – năng lượng.">
+  <meta property="og:title" content="Doza Kombucha – Trà lên men tốt cho sức khỏe">
+  <meta property="og:description" content="Giới thiệu Doza Kombucha – trà lên men tự nhiên, ngon – healthy – năng lượng.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1547514701-42782101795e?q=80&w=1200&auto=format&fit=crop">
+  <meta name="theme-color" content="#19a974"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Ccircle cx='128' cy='128' r='120' fill='%2319a974'/%3E%3Cpath d='M86 162c38-10 57-34 65-66 17 20 38 21 57 20-6 50-49 88-102 88-18 0-33-4-47-12 12-10 20-20 27-30z' fill='%23fff'/%3E%3C/svg%3E"/>
+  <style>
+    :root{
+      --brand:#19a974; /* xanh lá tươi */
+      --brand-dark:#0e8b60;
+      --bg:#f6fff9;
+      --text:#0c1a12;
+      --muted:#5f7268;
+      --card:#ffffffcc;
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text); background:radial-gradient(1200px 800px at 80% -10%, #d9ffe9 0%, transparent 50%),
+      radial-gradient(900px 700px at -10% 20%, #eafff3 0%, transparent 60%), var(--bg)}
+    a{color:inherit}
+    .container{max-width:1100px;margin-inline:auto;padding-inline:20px}
+    /* NAV */
+    nav{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(10px);background:linear-gradient(180deg,#ffffffcc,#ffffff80);z-index:30;border-bottom:1px solid #e8f2ec}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800}
+    .brand .logo{width:36px;height:36px;border-radius:12px;background:var(--brand);display:grid;place-items:center;color:#fff}
+    .brand small{font-weight:600;color:var(--muted)}
+    .nav-links{display:flex;gap:16px;flex-wrap:wrap}
+    .nav-links a{padding:8px 12px;border-radius:999px;text-decoration:none;color:#134d39;border:1px solid #d4eee3;background:#fff}
+    .nav-cta{display:flex;gap:8px}
+    .btn{appearance:none;border:none;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;transition:.2s}
+    .btn.primary{background:var(--brand);color:white}
+    .btn.primary:hover{background:var(--brand-dark)}
+    .btn.ghost{background:#fff;border:1px solid #d4eee3;color:#134d39}
+    /* HERO */
+    header.hero{position:relative;padding:64px 0 32px;overflow:hidden}
+    .hero-grid{display:grid;gap:28px;grid-template-columns:1.1fr 0.9fr;align-items:center}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:#e6fbf1;border:1px solid #c6f3df;color:#136d4f;padding:6px 10px;border-radius:999px;font-size:13px;font-weight:700}
+    h1{font-size:clamp(28px, 4vw, 48px);line-height:1.1;margin:10px 0}
+    .lead{font-size:18px;color:var(--muted)}
+    .hero-card{background:var(--card);border:1px solid #e6f4ee;border-radius:var(--radius);padding:16px}
+    .hero-art{position:relative;aspect-ratio:1/1;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(25,169,116,.35)}
+    .hero-art img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02)}
+    .sparkle{position:absolute;inset:auto 10% 10% auto;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 10px 30px rgba(0,0,0,.08);font-weight:700}
+    /* SECTIONS */
+    section{padding:56px 0}
+    h2{font-size:clamp(22px,2.6vw,34px);margin:0 0 18px}
+    p.section-lead{color:var(--muted);max-width:800px}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{background:#fff;border:1px solid #e6f2ec;border-radius:16px;padding:18px}
+    .row{display:flex;gap:14px;align-items:flex-start}
+    .icon{width:36px;height:36px;border-radius:10px;background:#e8faf2;display:grid;place-items:center;color:var(--brand)}
+    .tag{display:inline-block;border:1px dashed #cdeedc;color:#136d4f;background:#f5fffa;padding:4px 10px;border-radius:999px;font-size:12px}
+    /* FLAVORS */
+    .flavor{display:flex;gap:16px;align-items:center}
+    .flavor img{width:72px;height:72px;border-radius:14px;object-fit:cover;border:1px solid #e6f2ec}
+    /* TESTIMONIALS */
+    .quote{background:linear-gradient(180deg,#ffffff,#f7fff9);border:1px solid #e6f4ee;border-radius:16px;padding:16px}
+    /* CTA */
+    .cta{background:linear-gradient(90deg, #19a974, #2bd08b);color:white;border-radius:20px;padding:24px}
+    .cta h3{margin:0 0 10px}
+    footer{padding:24px 0;color:#567468}
+    /* RESPONSIVE */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .nav-links{display:none}
+    }
+    /* micro interations */
+    .floaty{animation:floaty 5s ease-in-out infinite}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    .shine{position:relative;overflow:hidden}
+    .shine::after{content:"";position:absolute;inset:0;background:linear-gradient(70deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-120%);animation:shine 3.2s linear infinite}
+    @keyframes shine{to{transform:translateX(120%)}}
+    
+    /* MODAL STYLES */
+    .modal-overlay{
+      position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:1000;
+      display:flex;align-items:center;justify-content:center;padding:20px;
+      opacity:0;visibility:hidden;transition:all 0.3s ease;
+    }
+    .modal-overlay.show{opacity:1;visibility:visible}
+    .modal{
+      background:white;border-radius:20px;padding:32px;max-width:500px;width:100%;
+      box-shadow:0 20px 60px rgba(0,0,0,0.2);transform:scale(0.9);transition:transform 0.3s ease;
+      text-align:center;position:relative;
+    }
+    .modal-overlay.show .modal{transform:scale(1)}
+    .modal-icon{font-size:48px;margin-bottom:16px}
+    .modal h3{color:var(--brand);margin:0 0 16px;font-size:24px;font-weight:700}
+    .modal p{color:var(--muted);line-height:1.6;margin:0 0 24px;font-size:16px}
+    .modal .btn{min-width:120px}
+    .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--muted);padding:4px}
+    .modal-close:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🍃</div>
+        <div>
+          Doza Kombucha<br>
+          <small>Healthy • Trendy • Energy</small>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#loi-ich">Lợi ích</a>
+        <a href="#huong-vi">Hương vị</a>
+        <a href="#phan-hoi">Phản hồi</a>
+        <a href="https://web.facebook.com/cao.vannam.26042k5" target="_blank">Liên hệ</a>
+      </div>
+      <div class="nav-cta">
+        <button class="btn ghost" onclick="scrollToId('huong-vi')">Menu</button>
+        <button class="btn primary" onclick="scrollToId('lien-he')">Đặt hàng</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge floaty">✨ Trà lên men tự nhiên – ít đường – vị tươi mát</div>
+        <h1>Uống Kombucha hôm nay, <span class="shine">sống khỏe mỗi ngày</span> 🍹</h1>
+        <p class="lead">Doza Kombucha là đồ uống lên men men hoàn toàn tự nhiên từ giá đỗ sạch, vỏ đỗ xanh và cỏ ngọt, không dùng đường tinh luyện hay trà chưa caffein, sản xuất tại nhà máy giá đỗ sạch đạt tiêu chuẩn IOS hàng đầu VIỆT NAM, công trình nghiên cứu sáng tạo hơn 15 năm cua của nhà khoa học. TS Đỗ Ngọc Chung - niềm tự hào giá đoõ Việt trong nước và ngoài nước  </p>
+        <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+          <button class="btn primary" onclick="scrollToId('huong-vi')">Khám phá hương vị</button>
+          <button class="btn ghost" onclick="scrollToId('loi-ich')">Tại sao healthy?</button>
+        </div>
+        <div style="margin-top:14px;display:flex;gap:10px;align-items:center;color:#406657">
+          <span class="tag">không đường</span>
+          <span class="tag">Thơm mát tự nhiên</span>
+          <span class="tag">500ml - tiện lợi</span>
+          <span class="tag">11 Kcal</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-art">
+          <img src="https://dozakombucha.netlify.app/img/11.jpg" alt="Ly kombucha tươi mát"/>
+          <div class="sparkle floaty">Giảm combo 10%</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section id="gioi-thieu">
+    <div class="container">
+      <h2>Giới thiệu</h2>
+      <p class="section-lead">Kombucha là đồ uống lên men tự nhiên từ trà, đường và men Scoby, mang lại trải nghiệm vị chua nhẹ – ngọt thanh, sảng khoái. Doza Kombucha hướng tới phong cách <strong>healthy – trendy – tiện lợi</strong> cho giới trẻ.</p>
+      <div class="grid cols-3" style="margin-top:14px">
+        <div class="card row">
+          <div class="icon">🍵</div>
+          <div>
+            <strong>Trà chọn lọc</strong>
+            <div class="muted">Chọn trà xanh/ô long chất lượng để ra hương thơm dịu và vị nền cân bằng.</div>
+          </div>
+        </div>
+        <div class="card row">
+          <div class="icon">🧪</div>
+          <div>
+            <strong>Lên men chuẩn</strong>
+            <div class="muted">Quy trình ủ kiểm soát giúp mùi vị ổn định và cảm giác nhẹ bụng.</div>
+          </div>
+        </div>
+        <div class="card row">
+          <div class="icon">🧊</div>
+          <div>
+            <strong>Đóng chai tiện</strong>
+            <div class="muted">Chai 500ml gọn nhẹ – mang theo mọi nơi, dùng mát là ngon nhất.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="loi-ich">
+    <div class="container">
+      <h2>Lợi ích nổi bật</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="row"><div class="icon">🌿</div><div><strong>Vị ngọt thanh, dễ uống</strong><div class="muted">Cân bằng vị chua – ngọt, không gây ngấy, hợp khẩu vị nhiều người.</div></div></div>
+        </div>
+        <div class="card">
+          <div class="row"><div class="icon">⚖️</div><div><strong>Ít đường</strong><div class="muted">Phù hợp phong cách sống lành mạnh, có thể chọn mức ngọt tuỳ ý.</div></div></div>
+        </div>
+        <div class="card">
+          <div class="row"><div class="icon">💧</div><div><strong>Nhẹ bụng</strong><div class="muted">Cảm giác sảng khoái khi dùng lạnh, thích hợp lúc học tập/làm việc.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLAVORS -->
+  <section id="huong-vi">
+    <div class="container">
+      <h2>Hương vị đề xuất</h2>
+      <p class="section-lead">Bạn có thể giữ menu cơ bản rồi mở rộng dần theo phản hồi khách hàng.</p>
+      <div class="grid cols-2">
+        <div class="card flavor">
+          <img src="https://dozakombucha.netlify.app/img/1.jpg" alt="DOZA - COLD BREW">
+          <div>
+            <strong>DOZA - COLD BREW</strong>
+            <div class="muted">Tỉnh táo. Hợp lúc mệt mỏi.</div>
+            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap"><span class="tag">35.000đ</span><span class="tag">Best-seller</span></div>
+          </div>
+        </div>
+        <div class="card flavor">
+          <img src="https://dozakombucha.netlify.app/img/3.jpg" alt="Hoa nhài">
+          <div>
+            <strong>DOZA - ROSE</strong>
+            <div class="muted">Ngủ ngon, tăng đề kháng.</div>
+            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap"><span class="tag">35.000đ</span><span class="tag">New</span></div>
+          </div>
+        </div>
+        <div class="card flavor">
+          <img src="https://dozakombucha.netlify.app/img/4.jpg" alt="Việt quất">
+          <div>
+            <strong>Trà vỏ đỗ xanh dâu tằm</strong>
+            <div class="muted">Đẹp da - dịu da - ngọt ngào</div>
+            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap"><span class="tag">20.000đ</span></div>
+          </div>
+        </div>
+        <div class="card flavor">
+          <img src="https://dozakombucha.netlify.app/img/7.jpg" alt="Đào mát lạnh">
+          <div>
+            <strong>Trà vỏ đỗ xanh xoài non</strong>
+            <div class="muted">Sáng da - sạch gan.</div>
+            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap"><span class="tag">20.000đ</span></div>
+          </div>
+        </div>
+        <div class="card flavor">
+            <img src="https://dozakombucha.netlify.app/img/6.jpg" alt="Đào mát lạnh">
+            <div>
+              <strong>DOZA - Mơ </strong>
+              <div class="muted">Mát ruột - dáng thon gọn.</div>
+              <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap"><span class="tag">35.000đ</span></div>
+            </div>
+          </div>
+
+
+      </div>
+      <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+        <button class="btn primary" onclick="alert('Tính năng sẽ cập nhật: chọn số lượng & đặt hàng!')">Thêm vào giỏ</button>
+        <button class="btn ghost" onclick="scrollToId('phan-hoi')">Xem phản hồi</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="phan-hoi">
+    <div class="container">
+      <h2>Phản hồi khách hàng</h2>
+      <div class="grid cols-3">
+        <div class="quote">
+          “Vị ngọt thanh, dễ uống – cảm giác an tâm hơn khi chọn đồ uống ít đường.”<br>
+          <small>— Sinh viên UTT</small>
+        </div>
+        <div class="quote">
+          “Menu nên có mô tả rõ hơn từng vị – mình chọn nhanh hơn.”<br>
+          <small>— Khách dùng thử</small>
+        </div>
+        <div class="quote">
+          “Mong có phiên bản đóng chai mang theo và nhiều vị trái cây nữa.”<br>
+          <small>— Bạn trẻ văn phòng</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="lien-he">
+    <div class="container">
+      <div class="cta">
+        <h3>Đặt hàng & Liên hệ</h3>
+        <p style="margin:0 0 10px">Inbox fanpage, nhắn Zalo hoặc điền form đặt hàng bên dưới. Giao nhanh trong ngày tại nội thành.</p>
+        <form onsubmit="event.preventDefault(); openOrder();" style="display:flex;gap:10px;flex-wrap:wrap">
+          <input required placeholder="Họ tên" aria-label="Họ tên" style="flex:1 1 220px;padding:12px;border-radius:12px;border:none"/>
+          <input required placeholder="Số điện thoại" aria-label="Số điện thoại" style="flex:1 1 220px;padding:12px;border-radius:12px;border:none"/>
+          <select aria-label="Hương vị" style="flex:1 1 220px;padding:12px;border-radius:12px;border:none">
+            <option>Gừng – Chanh sả</option>
+            <option>Hoa nhài</option>
+            <option>Việt quất</option>
+            <option>Đào mát lạnh</option>
+          </select>
+          <button class="btn" style="background:#fff;color:#134d39;border:1px solid #d4eee3" onclick="openShopee()">Mua trên Shopee</button>
+          <button class="btn primary" type="submit">Gửi yêu cầu</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Doza Kombucha • WEBSITE được tạo bởi Cao Văn Nam.</div>
+      <div style="display:flex;gap:12px"><a href="#gioi-thieu">Giới thiệu</a> • <a href="https://web.facebook.com/cao.vannam.26042k5" target="_blank">Liên hệ</a></div>
+    </div>
+  </footer>
+
+  <!-- MODAL DISCLAIMER -->
+  <div id="disclaimerModal" class="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-icon">⚠️</div>
+      <h3>Thông báo quan trọng</h3>
+      <p>
+        <strong>Trang web này chỉ giới thiệu không đặt hàng hay mua bán gì cả</strong><br><br>
+        Tất cả mọi trách nhiệm về web đều do <strong>Cao Văn Nam</strong> quản lý
+      </p>
+      <button class="btn primary" onclick="closeModal()">Đã hiểu</button>
+    </div>
+  </div>
+
+  <script>
+    const y=document.getElementById('y'); y.textContent=new Date().getFullYear();
+    function scrollToId(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'});}
+    
+    function showModal(){
+      document.getElementById('disclaimerModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal(){
+      document.getElementById('disclaimerModal').classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+    
+    function openOrder(){
+      showModal();
+    }
+    
+    function openShopee(){
+      showModal();
+    }
+    
+    // Close modal when clicking outside
+    document.getElementById('disclaimerModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
